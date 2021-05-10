@@ -22,39 +22,36 @@ S ohledem na konceptuální založení projektu se může zdát zvukové zpracov
 
  
 
- 
-
-# Kredity 
-
-### Mluvčí (Režijně-dramaturgický koordinátor projektu) 
-
-Ondřej Tyle 
-
-### IT + Web 
-
-Anna Zderadickova, Maksym Kriventsev 
-
-### designer (prostředí + web) 
-
-Jirka Humpl, Tomáš Bilák, Maksym Kriventsev (web), Ondřej Janoušek (prostredi 3D) 
-
-### scénograf 
-
-Jozef Čabo 
-
-### tanečník 
-
-Samuel Loj, Anna Kroupová 
-
-### Sound design 
-
-Julie Fediv 
-
-### PR + Textové materiály 
-
-Ondřej Janoušek, Maksym Kriventsev, Šimon Chlouba 
-
- 
+ <ul>  
+	<li>Mluvčí (Režijně-dramaturgický koordinátor projektu)</li>
+	<li>Ondřej Tyle</li>
+	<li></li><li></li>
+	<li>IT + Web</li>
+	<li>Anna Zderadickova</li>
+	<li>Maksym Kriventsev </li>
+<li></li><li></li>
+<li>designer (prostředí + web)</li>
+<li>Jirka Humpl</li>
+<li>Tomáš Bilák</li>
+<li>Maksym Kriventsev (web)</li>
+<li>Ondřej Janoušek (prostredi 3D)</li>
+<li></li><li></li>
+<li>Scénograf</li>
+<li>Jozef Čabo</li>
+<li></li><li></li>
+<li>tanečník</li>
+<li>Samuel Loj</li>
+<li>Anna Kroupová </li>
+<li></li><li></li>
+<li>Sound design</li>
+<li>Julie Fediv</li>
+<li></li><li></li>
+<li>PR + Textové materiály</li>
+<li>Ondřej Janoušek</li>
+<li>Maksym Kriventsev</li>
+<li>Šimon Chlouba</li>
+<li></li><li></li>
+</ul> 
  
 
  
