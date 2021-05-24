@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" class="no-touch">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylechat.css">
     <link href="https://fonts.googleapis.com/css?family=Muli|Space+Mono&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/pageable@latest/dist/pageable.min.css" rel="stylesheet">
     <title>Blue Team Project</title>
+    
+    
 </head>
-<body>
+
+<body id="body">
     <div class="anchors">
         <ul>
-            <li><a href="#page-1">BEeeEing 1</a></li>
-            <li><a href="#page-2">Anotace 2</a></li>
-            <li><a href="#page-3">Popis 3</a></li>
-            <li><a href="#page-4">BTNS 4</a></li>
-            <li><a href="#page-5">Tech 5</a></li>
-            <li><a href="#page-6">CREDITS</a></li>
-            <li><a href="#page-7">CVUT 7</a></li>
-            <li><a href="#page-8">CVUT 8</a></li>
-            <li><a href="#page-9">CVUT 9</a></li>
+            <li><a href="#main">Main</a></li>
+            <li><a href="#annotation">Annotation</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#credits">Credits</a></li>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#manual">Manual</a></li>
+            <li><a href="#tech-info">Tech info</a></li>
         </ul>
     </div>
+    <div class="roketchat">
+        <div id="help-popup-trigger" style="height: 1000em;">
+        </div>
+        <!-- ROCKETCHAT - chatroom -->
+        <div id="help-popup" class="help-popup" onclick="hideBubble()">
+            <p class="speech-bubble">
+                Přidejte se do chatu! Najdete zde<br>aktuální informace o průběhu večera<br>a pomoc s jakýmkoliv problémem.
+            </p>
+        </div>
+        <button onclick="toggleChatbox()" class="chatbox-button" id="chatbox-button">Otevřít/zavřít chat</button>
+        <iframe src="https://green.iim.cz/channel/pondeli-24-5/?layout=embedded" title="Chat" class="chatbox"
+            id="chatbox"></iframe>
+    </div>
     <div id="container">
-        <div data-anchor="Page 1">
+        <div data-anchor="Main">
             <div id="app">
                 <div id="wrapper">
-                    <div id="rotate-words">  
+                    <div id="rotate-words">
                         <div>
                             <h1 class="glitch" data-text="BEING">BEING</h1>
                         </div>
@@ -35,40 +51,90 @@
                             <h1 class="glitch" data-text="HUMAN being">HUMAN being</h1>
                         </div>
                     </div>
-                
-                    <span class="sub">ITT2-2021</span>
-                <br>
-                <span class="sub">Blue Team</span>
 
-                <div class="scroller">
-                    <small class="ss">Scroll down or swipe up.</small>
+                    <span class="sub">ITT2-2021</span>
+                    <br>
+                    <span class="sub">Blue Team</span>
+
+                    <div class="scroller">
+                        <small class="ss">Scroll down or swipe up. <br> Or use keyboard arrows</small>
+                    </div>
                 </div>
             </div>
         </div>
-        <section data-anchor="Page 2">
+        <section data-anchor="Annotation">
             <div class="text">
-                <h2 class="glitch" data-text="Anotace">Anotace</h2>
+                <h2 class="glitch" data-text="Annotation">Annotation</h2>
                 <p>
-                Cílem tohoto projektu je divákovi prezentovat fiktivní situaci, ve které se ocitá v roli robota. naskytne se mu možnost pohybovat se ve virtuálním prostoru určitého typu “galerie”. A pozorovat tak náš lidský svět z odosobněné perspektivy.  
+                    This project is an attempt of an immersion of spectators mind and his perception of reality into
+                    virtual body of a machine which reception is transformed by absence of the “humanity”.</p>
+                <p>
+                    Spectator is granted an opportunity to examine human emotions and customs without its heaviness of historical and
+                    social context. User has the possibility to contemplate about these things and about their position
+                    and role in present reality.
                 </p>
             </div>
         </section>
-        <section data-anchor="Page 3">
+        <section data-anchor="Description">
             <div class="text">
-            <h2 class="glitch" data-text="Popis">Popis</h2>
-            <p>
-                Vítej Tr2c6 v našem rozpoznávacím zařízení, na rozbor pozůstatků lidské civilizace. Zde se snažíme prezentovat otázky, které doposud nedokážeme zcela zodpovědět a rozklíčovat jejich význam již zaniklého světa. Máš možnost projít se po galerii, jenž je složena z lidských emocí, zvyků a hyper objektu jako je náboženství. 
-            </p>
-        </div>
+                <h2 class="glitch" data-text="Project Desription">Project Desription</h2>
+                <p>
+                    You have been granted the opportunity to experience our world through the lenses of a different
+                    being, your senses may be restricted but it grants you the ability to see the reality differently,
+                    importance of things we find necessary or natural has been stripped, now it is up to you to fill it
+                    with content and live them differently.
+                </p>
+                <p>
+                    We hope it changes your perspective and enriches your thoughts about and gives you possibility to analyse things as though given.
+
+                    Enjoy.
+                </p>
+            </div>
         </section>
-        <section data-anchor="Page 4">
+        <section data-anchor="Credits">
+            <div class="text">
+                <ul class="credit">
+                    <li></li>
+                    <li class="h1">Speaker</li>
+                    <li></li>
+                    <li>Ondřej Tyle</li>
+                    <li></li>
+                    <li class="h1">Design</li>
+                    <li></li>
+                    <li>Anna Zderadičková</li>
+                    <li>Jirka Humpl</li>
+                    <li>Tomáš Bilák</li>
+                    <li>Ondřej Janoušek</li>
+                    <li></li>
+                    <li class="h1">Scenographer</li>
+                    <li></li>
+                    <li>Jozef Čabo</li>
+                    <li></li>
+                    <li class="h1">Sound design</li>
+                    <li></li>
+                    <li>Julie Fediv</li>
+                    <li>Jan Šíma</li>
+                    <li></li>
+                    <li class="h1">Web</li>
+                    <li></li>
+                    <li>Maksym Kriventsev </li>
+                    <li></li>
+                    <li class="h1">PR & text materials</li>
+                    <li></li>
+                    <li>Šimon Chlouba</li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section data-anchor="Explore">
             <div class="text">
                 <div class="splitter">
                     <div class="splitter-item">
                         <div class="vertical-container">
                             <div class="vertical-content">
-                                <a href="#" class="splitter-button">
-                                    <br>NEOS VR
+                                <a target="_target" href="https://youtu.be/dNVmUF8ASxE"
+                                    class="splitter-button">
+                                    WATCH DEMO <br><br> ON YOUTUBE
                                 </a>
                             </div>
                         </div>
@@ -76,8 +142,18 @@
                     <div class="splitter-item">
                         <div class="vertical-container">
                             <div class="vertical-content">
-                                <a href="#" class="splitter-button">
-                                    Jak nainstalovat NEOS
+                                <a href="./explore.html"
+                                    class="splitter-button">
+                                    EXPLORE <br><br> OUR WORLD
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="splitter-item">
+                        <div class="vertical-container">
+                            <div class="vertical-content">
+                                <a href="#manual" class="splitter-button">
+                                    HOW TO <br><br>INSTALL?
                                 </a>
                             </div>
                         </div>
@@ -85,66 +161,38 @@
                 </div>
             </div>
         </section>
-        <section data-anchor="Page 5">
+        <section data-anchor="Manual">
             <div class="text">
-                <h2 class="glitch" data-text="Technický popis">Technický popis</h2>
-                <p>Ozvučení jednotlivých místností je založeno na konceptu opakujících se smyček hudebních, či pouze zvukových kompozic. Obsah těchto kompozic je tak záměrně naplněn hudebními motivy na místech, kde si ztělesněné téma žádá zápletkovou výstavbu výpravění, na místech ostatních je pak kompozice složena z kombinace syntetického sound designu a technik foley sound designu, čímž je, daleko spíše než jakéhosi děje, dosaženo navození aktuální atmosféry daného okamžiku. </p>
-                <p>Navození autenticity okamžiku dopomáhá také “zabudovaný” sound design, jenž lze zaslechnout již v pouhých interakcích s virtuálním prostorem. </p>
-                <p>S ohledem na konceptuální založení projektu se může zdát zvukové zpracování člověku nepatřičné, a to zejména mnohdy nemístným spojováním zvukových prvků, jež by člověk v jedné kompozici patrně nespojil. Nezapomínejme ovšem na situaci robota, jenž se prochází místnostmi složenými ze střípků dávné lidské existence, nepatřičnost je tedy na místě.</p>
+                <h2 class="glitch" data-text="NEOS VR Manual">NEOS VR Manual</h2>
+                <!-- <h3>Steam installation</h3> -->
+                <p>To install NeosVR, you must
+                    <a target = "_blank" href="https://store.steampowered.com/about/">download and install Steam</a> first.
+                </p>
+                <p>Steam will require to log in, so you need to
+                    <a target = "_blank" href="https://store.steampowered.com/join/">create an account</a>.
+                </p>
+                <!-- <h3>NeosVR installation</h3> -->
+                <p>NeosVR available for Windows and Linux. <a target = "_blank" href="https://store.steampowered.com/app/740250/Neos_VR/">Download NeosVR on Steam</a>.
+                </p>
+                <p>
+                	You can also watch the exhibition <a target="_target" href="https://youtu.be/dNVmUF8ASxE">on YouTube</a>.
+                </p>
             </div>
         </section>
-        <section data-anchor="Page 6">
+        <section data-anchor="Tech info">
             <div class="text">
-            <ul class="credit">  
-                <li></li>
-                <li></li>
-                <li class="h1">Mluvčí (Režijně-dramaturgický koordinátor projektu)</li>
-                <li>Ondřej Tyle</li>
-                <li></li>
-                <li></li>
-                <li class="h1">IT + Web</li>
-                <li>Anna Zderadickova</li>
-                <li>Maksym Kriventsev </li>
-                <li></li>
-                <li></li>
-                <li class="h1">designer (prostředí + web)</li>
-                <li>Jirka Humpl</li>
-                <li>Tomáš Bilák</li>
-                <li>Maksym Kriventsev (web)</li>
-                <li>Ondřej Janoušek (prostredi 3D)</li>
-                <li></li>
-                <li></li>
-                <li class="h1">Scénograf</li>
-                <li>Jozef Čabo</li>
-                <li></li>
-                <li></li>
-                <li class="h1">Tanečník</li>
-                <li>Samuel Loj</li>
-                <li>Anna Kroupová </li>
-                <li></li>
-                <li></li>
-                <li class="h1">Sound design</li>
-                <li>Julie Fediv</li>
-                <li></li>
-                <li></li>
-                <li class="h1">PR + Textové materiály</li>
-                <li>Ondřej Janoušek</li>
-                <li>Maksym Kriventsev</li>
-                <li>Šimon Chlouba</li>
-            </ul> 
-        </div>
-        </section>
-        <section data-anchor="Page 7">
-            <div class="text"></div>
-        </section>
-        <section data-anchor="Page 8">
-            <div class="text"></div>
-        </section>
-        <section data-anchor="Page 9">
-            <div class="text"></div>
+                <h2 class="glitch" data-text="Technical information">Technical information</h2>
+                <p>The sound system of individual rooms is based on the concept of repeating loops of musical or only
+                    sound compositions. The content of these compositions is thus deliberately filled with musical
+                    motifs in places where the embodied theme requires the plot construction of the set, in other places
+                    the composition is composed of a combination of synthetic sound design and foley sound design
+                    techniques, which, far rather than some kind of the current atmosphere of the moment.</p>
+            </div>
         </section>
     </div>
-    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script src="js/pageable.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
+
 </html>

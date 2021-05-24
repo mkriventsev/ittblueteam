@@ -1,0 +1,96 @@
+/* CHAT + Help bubble popup */
+.help-popup {
+    font-size: 1rem;
+    position: fixed;
+    bottom: -10em;
+    right: 3em;
+
+    transition: bottom;
+    transition-timing-function: cubic-bezier(.63, 2, .8, 1.25);
+    transition-duration: 0.5s;
+}
+
+.jump {
+    bottom: 2em;
+}
+
+.speech-bubble {
+    position: relative;
+    background: #768d87;
+    color: white;
+    border-radius: .4em;
+    margin-right: 10px;
+    padding: 1em;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left-color: #768d87;
+    border-right: 0;
+    margin-top: -10px;
+    margin-right: -10px;
+}
+
+.hide {
+    display: none;
+}
+
+.chatbox {
+    font-size: 1rem;
+
+    position: fixed;
+    right: -22em;
+    height: 100%;
+    width: 22em;
+    border: 0;
+    top: 0;
+
+    transition: right 0.5s;
+}
+
+.chatbox-button {
+    font-size: 1rem;
+
+    background: linear-gradient(center top, #768d87 5%, #6c7c7c 100%);
+    background-color: #768d87;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    text-indent: 0;
+    border: 1px solid #566963;
+    display: inline-block;
+    color: #ffffff;
+    height: 32px;
+    line-height: 32px;
+    width: 160px;
+    text-decoration: none;
+    text-align: center;
+
+    transform: rotate(-90deg);
+    transition: right 0.5s;
+
+    bottom: 5em;
+    right: -4em;
+    position: fixed;
+    transition: right 0.5s;
+}
+
+.chatbox-button:hover {
+    background: linear-gradient(center top, #6c7c7c 5%, #768d87 100%);
+    background-color: #6c7c7c;
+}
+
+.btn-out {
+    right: 18em;
+}
+
+.box-out {
+    right: 0;
+}

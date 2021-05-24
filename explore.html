@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-touch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylechat.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/pageable@latest/dist/pageable.min.css" rel="stylesheet">
+    <title>Blue Team Project</title>
+    <script>
+        // CHAT + Help bubble popup code
+        function checkVisible(elm) {
+            var rect = elm.getBoundingClientRect();
+            var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+            return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+        }
+
+        function hideBubble() {
+            const help = document.getElementById('help-popup');
+            if (!help.classList.contains('hide')) {
+                help.classList.add('hide');
+            }
+        }
+
+        function toggleChatbox() {
+            const chatbox = document.getElementById('chatbox');
+            const chatboxbtn = document.getElementById('chatbox-button');
+
+            if (chatbox.classList.contains('box-out')) {
+                chatbox.classList.remove('box-out');
+                chatboxbtn.classList.remove('btn-out');
+            } else {
+                chatbox.classList.add('box-out');
+                chatboxbtn.classList.add('btn-out');
+            }
+
+            hideBubble();
+        }
+
+        window.onscroll = function () {
+            const elem = document.getElementById('help-popup-trigger');
+            const help = document.getElementById('help-popup');
+
+            if (!help.classList.contains('jump') && checkVisible(elem)) {
+                help.classList.add('jump');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="anchors">
+        <ul>
+            <li><a href="./#explore" class="active">Back</a></li>
+        </ul>
+    </div>
+    <div class="roketchat">
+        <div id="help-popup-trigger" style="height: 1000em;">
+        </div>
+        <!-- ROCKETCHAT - chatroom -->
+        <div id="help-popup" class="help-popup" onclick="hideBubble()">
+            <p class="speech-bubble">
+                Přidejte se do chatu! Najdete zde<br>aktuální informace o průběhu večera<br>a pomoc s jakýmkoliv
+                problémem.
+            </p>
+        </div>
+        <button onclick="toggleChatbox()" class="chatbox-button" id="chatbox-button">Otevřít/zavřít chat</button>
+        <iframe src="https://green.iim.cz/channel/pondeli-24-5/?layout=embedded" title="Chat" class="chatbox"
+            id="chatbox"></iframe>
+    </div>
+    <div id="container">
+        <section data-anchor="go-to-world">
+            <div class="text">
+                <h2 class="glitch" data-text="Explore our world">Explore our world</h2>
+                <p>
+                    Before opening our NEOS VR world, please make sure that <br> your NEOS VR software is <u>installed and not running</u>.
+                </p>
+                <p>
+                	You can also watch the exhibition on <a target="_target" href="https://youtu.be/dNVmUF8ASxE">YouTube</a>
+                </p>
+                <p> The world will be opened at</p>
+                <h2 style="display: inline-block;" class="glitch" data-text="24 May, 19:00">24 May, 19:00</h2>
+                
+                <div class="splitter solo solo-splitter">
+                    <div class="splitter-item solo">
+                        <div class="vertical-container">
+                            <div class="vertical-content">
+                                <a href="./#explore" class="splitter-button-solo">
+                                    GO <br><br> BACK
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="splitter-item solo">
+                        <div class="vertical-container">
+                            <div class="vertical-content">
+                                <a href="https://youtu.be/dNVmUF8ASxE" target= "_blank" class="splitter-button-solo">
+                                    WATCH DEMO <br><br> ON YOUTUBE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="splitter-item solo">
+                        <div class="vertical-container">
+                            <div class="vertical-content">
+                                <a target="_blank"
+                                    href="http://cloudx.azurewebsites.net/open/session/S-U-iimheadless:itt2-2021-blue"
+                                    class="splitter-button-solo">
+                                    EXPLORE <br><br> OUR WORLD
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="js/pageable.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
